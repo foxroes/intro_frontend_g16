@@ -1,0 +1,9 @@
+.card img {
+  height: 10rem;
+  object-fit: cover;
+}
+@media screen and (max-width: 576px) {
+  .card img {
+    height: 15rem;
+  }
+}

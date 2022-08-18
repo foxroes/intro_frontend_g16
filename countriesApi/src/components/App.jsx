@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react'
-import Layout from '../layout'
+
+// services
 import { axiosData } from '../services/fetchData'
+
+// components
+import Layout from '../layout'
 import Card from './common/Card'
+import Loading from './common/Loading'
 
 function App () {
   const [countries, setCountries] = useState([])
@@ -14,18 +19,18 @@ function App () {
     data()
   }, [])
 
-  // comentario
-
   return (
     <Layout>
-      <section className='container'>
-        <section className='row'>
+      <section className='container py-5'>
+        <section className='row gy-4'>
           {
             countries.length === 0
-              ? <p className='m-0'>Loading...</p>
+              ? <Loading />
               : countries.map((country, index) => (
-                <Card key={index} {...country} />)
-              )
+                <aside key={index} className='col-12 col-sm-6 col-md-4 col-lg-3'>
+                  <Card {...country} />
+                </aside>
+              ))
           }
         </section>
       </section>
