@@ -1,11 +1,16 @@
 import { Route, Routes } from 'react-router-dom'
-import App from './components/App'
+import Layout from './layout'
+import App from './pages/App'
+import Country from './pages/Country'
 
 const Router = () => {
   return (
-    <Routes>
-      <Route path='/' element={<App />} />
-    </Routes>
+    <Layout>
+      <Routes>
+        <Route path='/' element={<App />} />
+        <Route path='/:idCode' element={<Country />} />
+      </Routes>
+    </Layout>
   )
 }
 

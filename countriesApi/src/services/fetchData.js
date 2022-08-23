@@ -7,9 +7,8 @@ const fetchData = async () => {
   return res
 }
 
-const axiosData = async () => {
-  const { data } = await axios.get('https://restcountries.com/v3.1/all')
+const axiosData = async (URI) => {
+  const { data } = await axios.get(URI)
   return data
 }
-
 export { fetchData, axiosData }

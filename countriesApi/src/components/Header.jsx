@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom'
+
 const Header = () => {
   return (
     <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
-      <div className='container-fluid'>
-        <a className='navbar-brand' href='#'>Countries API</a>
+      <div className='container'>
+        <Link className='navbar-brand' to='/'>Countries API</Link>
         <button className='navbar-toggler' type='button'>
           <span className='navbar-toggler-icon' />
         </button>

@@ -5,7 +5,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      {children}
+      <section className='container py-5'>
+        {children}
+      </section>
       <Footer />
     </>
   )
